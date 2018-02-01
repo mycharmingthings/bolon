@@ -1,0 +1,32 @@
+{
+  "name": "bolon",
+  "version": "1.0.0",
+  "description": "\"bolonprogress\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mycharmingthings/bolon.git"
+  },
+  "keywords": [
+    "\"cat\""
+  ],
+  "author": "yang youmiao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mycharmingthings/bolon/issues"
+  },
+  "homepage": "https://github.com/mycharmingthings/bolon#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel-minify": "^0.3.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
