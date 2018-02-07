@@ -1,0 +1,63 @@
+.carousel{
+	position:relative;
+	width:790px;
+	height:350px;	
+}
+
+.carousel_img  a{
+	position:absolute;
+	top:0;
+	left:0;
+	opacity: 0;
+	filter:alpha(opacity:0);
+	
+}
+.carousel_img  a img{
+	width:790px;
+	height:350px;
+}
+.carousel_img  a:first-child{
+	opacity:1;
+	filter:alpha(opacity:100);
+	display:block;
+}
+.carousel_control{
+   display:none;
+}
+
+.carousel_control a{
+	position:absolute;
+	top:50%;
+	margin-top:-30px;
+	width:30px;
+	background: rgba(255,255,255,.4);
+	color:white;
+	text-align:center;
+    font: 30px/80px 'Microsoft Yahei';	
+}
+.carousel_control a:last-Child{
+	right:0;
+}
+
+.carousel_btn{
+	position:absolute;
+	bottom:20px;
+	transform:translate(-50%);
+	left:50%;	
+	background:rgba(255,255,255,.6);
+	border-radius:9px;
+	font-size:0;
+	padding:5px;
+}
+
+.carousel_btn a{
+	display:inline-block;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	background: white;
+	margin:0 3px;
+}
+.carousel_btn .active{
+	background:red;
+}

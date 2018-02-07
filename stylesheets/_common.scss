@@ -1,0 +1,117 @@
+body,div,p,h1,h2,h3,h4,h5,h6,hr,ul,ol,li,dd,dt,dl,table,tr,td,fieldset,caption,form,input,img,legend{
+	margin:0;
+	padding:0;
+}
+* {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body{
+	width: 100%;
+	font-family: H45S,"Microsoft YaHei",sans-serif;
+    word-wrap: break-word;
+	color: #333;
+	background-color: #fff;
+}
+html,body{
+	height:100%;
+}
+html{
+	font-size: 26.67vw;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+ul,li{
+	list-style: none;
+}
+img{
+	border:none;
+	vertical-align: bottom;
+	border: 0;
+}
+input{
+	outline: none;
+	// border: 0 none;
+}
+.main100 {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+//carousel start
+// .carousel{
+// 	position:relative;
+// 	width:100%;		
+// }
+// .carousel:after{
+// 	content:"";
+// 	height:0;
+// 	overflow:hidden;
+// 	clear:both;
+// 	display:block;
+// 	visibility:hidden;
+// }
+// .carousel_img{
+// 	width:100%;
+// }
+
+// .carousel_img  a{
+// 	position:absolute;
+// 	top:0;
+// 	left:0;
+// 	opacity: 0;
+// 	display:block;
+// 	//filter:alpha(opacity:0);		
+// }
+// .carousel_img  a img{
+// 	width:100%;
+// 	display:block;
+// }
+// .carousel_img  a:first-child{
+// 	opacity:1;
+// 	//filter:alpha(opacity:100);
+// 	display:block;
+// }
+// .carousel_control{
+//    display:none;
+// }
+
+// .carousel_control a{
+// 	position:absolute;
+// 	top:50%;
+// 	margin-top:3%;
+// 	width:30px;
+// 	background: rgba(255,255,255,.4);
+// 	color:white;
+// 	text-align:center;
+//     font: 30px/80px 'Microsoft Yahei';	
+// }
+// .carousel_control a:last-Child{
+// 	right:0;
+// }
+
+// .carousel_btn{
+// 	position:absolute;
+// 	top: 268px;
+// 	transform:translate(-50%);
+// 	left:50%;	
+// 	background:rgba(255,255,255,.6);
+// 	border-radius:9px;
+// 	font-size:0;
+// 	padding:5px;
+// }
+
+// .carousel_btn a{
+// 	display:inline-block;
+// 	width:10px;
+// 	height:10px;
+// 	border-radius:50%;
+// 	background: white;
+// 	margin:0 3px;
+// }
+// .carousel_btn .active{
+// 	background:red;
+// }
+//carousel start

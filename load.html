@@ -10,8 +10,8 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>  
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>  
     <!-- <![endif]  -->
-    <link rel="stylesheet" href="stylesheets/index.css">
-   
+    <link rel="stylesheet" href="stylesheets/load.css">
+    
 </style>
 </head>
 <body>
@@ -37,7 +37,7 @@
                     <div class="rightcon">
                         <div class="login">
                             <!-- ngIf: user -->
-                            <!-- ngIf: user_reg --><a href="load.html" ng-if="user_reg" class="ng-binding ng-scope">登录/注册</a><!-- end ngIf: user_reg -->
+                            <!-- ngIf: user_reg --><a href="#/login" ng-if="user_reg" class="ng-binding ng-scope">登录/注册</a><!-- end ngIf: user_reg -->
                             <!-- ngIf: user_tui -->
                         </div>
                         <div class="cart_bag " biao="0">
@@ -401,197 +401,141 @@
             <!--wap菜单浮动 end-->
         </div>
         <!--wrapper home_page ng-scope 中间内容 -->
-        <div class="wrapper home_page ng-scope">
-            <!-- banner  轮播图内容-->
-            <div class="swiper-container swiper-container-horizontal">
-                <div style="width: 0px;  height: 1px; display: none; background: rgba(277,277,277,0);">
-
+        <div class="wrapper bor_top wap_top_x ng-scope">
+            <!--pc主题页 start -->
+            <div class="w1200 wap_hide">
+                <!-- 头 start -->
+                <div class="main100 main_title">
+                    <span><a href=" #/home" title="">首页&nbsp;&gt;</a></span><span>我的账户&nbsp;&gt;</span><span>登录</span>
                 </div>
-                <div class= "carousel">
-                    <!-- 轮播照片 -->
-                    <div class= "carousel_img"> 	
-                        <a class="carousel_imgA" href="javascript:;" href=""><img class="carousel_imgIMg" src="images/1.jpg" alt=""></a>
-                        <a class="carousel_imgA" href="javascript:;" href=""><img class="carousel_imgIMg" src="images/2.jpg" alt=""></a>
-                        <a class="carousel_imgA" href="javascript:;" href=""><img class="carousel_imgIMg" src="images/2.jpg" alt=""></a>
-                    </div>
-                    <!-- 左右轮播按钮 -->
-                    <!-- <div class="carousel_control">
-                        <a href="javascript:;" class="control_prev"><</a>
-                        <a href="javascript:;" class="control_next">></a>
-                    </div> -->
-                    <!-- 底下轮播圆点按钮 -->
-                    <!-- btn -->
-                    <div class="float" style="height:0;overflow:hidden;clear:both;">
-
-                    </div>
-                </div>
-            </div>
-            <script type="text/javascript" src="javascripts/bufferMove.js"></script>
-            <script type="text/javascript" src="javascripts/carousel_index.js"></script>
-            <script type="text/javascript" src="javascripts/carousel_new_index.js"></script>
-            <script type="text/javascript" src="javascripts/bufferMove.js"></script>
-            <!-- banner end-->
-            <!--container -->
-            <div class="w1100">
-                <!-- module1 -->
-                <div class="module1">
-                    <div class="left_main">
-                        <div class="lefttop">
-                            <a href="javascript:void(0);" ng-click="CpTaiyang(ee)" class="wap_hide">
-                                <img class="main100" ng-src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811391632.jpg" src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811391632.jpg">
-                                <div class="home_xx">
-                                    <span class="ng-binding">Sunglasses Collection</span>
-                                    <h3 class="ng-binding">太阳镜</h3>
-                                </div>
-                            </a>
-                            <a href="javascript:void(0);" ng-click="CpTaiyang(ee)" class="pc_hide">
-                                <img class="main100" ng-src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811393541.jpg" src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811393541.jpg">
-                                <div class="home_xx">
-                                    <span class="ng-binding">Sunglasses Collection</span>
-                                    <h3 class="ng-binding">太阳镜</h3>
-                                </div>
-                            </a>
+                <!-- 头  end-->
+                <!-- left start -->
+                <div class="i_main i_main1 left">
+                    <strong class="i_title">登录</strong>
+                    <!--登录 --> 
+                    <form class="i_content bor_none">
+                        <span class="main100 login_bolon">我的BOLON <br>输入您的手机号或者电子邮箱及密码登录“我的帐户”</span>
+                        <input type="text" placeholder="手机号/电子邮箱" class="main100 login_input ng-pristine ng-untouched ng-valid ng-valid-maxlength" ng-model="userName" value="" maxlength="30">
+                        <input type="password" placeholder="密码" class="main100 login_input ng-pristine ng-untouched ng-valid ng-valid-maxlength" ng-model="password" value="" maxlength="20" ng-keyup="toLogin1($event)">
+                        <div class="return_notice">
+                            <a ng-class="{return_dui: login_dui1==true}" ng-click="login_dui()" class="return_dui"></a>
+                            <input style="display:none;" type="checkbox">
+                            <span class="return_t">记住我的密码</span>
                         </div>
-                    </div>
-                    <div class="leftbot">
-                            <a href="javascript:void(0);" ng-click="CpGuang(ee)" class="wap_hide">
-                             <img class="main100" ng-src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811395311.jpg" src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811395311.jpg">
-                               <div class="home_xx">
-                                 <span class="ng-binding">Optical Collection</span>
-                                 <h3 class="ng-binding">光学镜</h3>
-                             </div>
-                         </a>
-                         <a href="javascript:void(0);" ng-click="CpGuang(ee)" class="pc_hide">
-                             <img class="main100" ng-src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811395788.jpg" src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811395788.jpg">
-                               <div class="home_xx">
-                                 <span class="ng-binding">Optical Collection</span>
-                                 <h3 class="ng-binding">光学镜</h3>
-                             </div>
-                         </a>
-                    </div> 
-                    <div class="rightm">
-                        <a href="#/custom" class="wap_hide">
-                            <img class="main100" ng-src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811381058.jpg" src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811381058.jpg">
-                            <div class="home_xx">
-                                    <span class="ng-binding">Exclusive custom</span>
-                                    <h3 class="ng-binding">专属定制</h3>
-                                </div>
-                        </a>
-                        <a href="#/custom" class="pc_hide">
-                            <img class="main100" ng-src="https://www.bolon.cn/image/web//upload/article/20180128/201801281356288.jpg" src="https://www.bolon.cn/image/web//upload/article/20180128/201801281356288.jpg">
-                            <div class="home_xx">
-                                <span class="ng-binding">Exclusive custom</span>
-                                <h3 class="ng-binding">专属定制</h3>
+                        <a class="main100 login_sub	 login_sub1" ng-click="loginn()">登录</a>
+                        <a class="login_m">忘记密码</a>
+                    </form>
+                    <!--第三方登录-->
+                        <div class="main100 login_hao_back">
+                            <div class="login_hao">
+                                    <span>第三方账号登录</span>
                             </div>
+                            <div class="login_hao1">
+                                <a href="/ishop/web/?app_act=member/weixin" class="wap_hide">
+                                    <img src="images/login_03.jpg">
+                                </a>
+                                <a href="/ishop/web/?app_act=member/weibo">
+                                    <img src="images/login_05.jpg">
+                                </a>
+                                <a href="/ishop/web/?app_act=member/qq">
+                                    <img src="images/login_07.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <!--第三方登录end-->
+                </div>
+                <!-- left end -->
+                <!-- right start -->
+                <div class="i_main i_main1 right">
+                    <strong class="i_title">注册</strong>
+                    <!--注册 --> 
+                    <div class="i_content bor_none">
+                        <span class="main100 login_bolon">新用户 <br>立即填写详细会员信息享受专属礼遇。</span>
+                        <div class="main100">
+                        <strong class="login_reg">注册用户专享服务:</strong>
+                        <p class="login_p">·使用收藏夹保存心仪商品<br>
+                        ·通过“我的帐户”查看个人信息<br>
+                            ·完成购物流程更快捷<br></p>
+                        </div>
+                        <a class="main100 login_sub reg_sub wap_reg">注册</a>
+                    </div>           
+                </div>
+                <!-- right end -->
+            </div>
+            <!--pc主题页 end -->
+            <!--手机端 start -->
+            <div class="login_main pc_hide login_main_show">
+                <strong class="login_title">登录</strong>
+                <!--登录 --> 
+                <div class="login_content">
+                <form class="ng-pristine ng-valid ng-valid-maxlength">
+                    <span class="main100 login_bolon">我的BOLON <br>输入您的手机号或者电子邮箱及密码登录“我的帐户”</span>
+                    <input type="text" placeholder="手机号/电子邮箱" class="main100 login_input ng-pristine ng-untouched ng-valid ng-valid-maxlength" ng-model="userName1" maxlength="30">
+                    <input type="password" placeholder="密码" class="main100 login_input ng-pristine ng-untouched ng-valid ng-valid-maxlength" ng-model="password1" name="mi" maxlength="20" ng-keyup="toLogin2($event)">
+                    <div class="jizhu">
+                        <a class="jizhu_dui"></a>
+                        <input style="display:none;" type="checkbox" name="mi">
+                        <span class="jizhu_t">记住我的密码</span>
+                    </div>
+                    <a href="javascript:void(0);" class="main100 wap_login" ng-click="login1()">登录</a>
+                    <a href="javascript:void(0);" class="main100 wap_reg" ng-click="reg1()">注册</a>
+                    <a href="javascript:void(0)" class="login_m1" ng-click="wang1()">忘记密码?</a>
+                </form>
+                </div>
+                <!-- 第三方账号登录 -->
+                <div class="main100 login_hao_back">
+                    <div class="login_hao">
+                        <strong></strong>
+                        <div class="main100">
+                            <span>第三方账号登录</span>
+                        </div>
+                    </div>
+                    <div class="login_hao1">
+                        <a href="/ishop/web/?app_act=member/weixin_gz">
+                            <img src="images/login_03.jpg">
+                        </a>
+                        <!--<a href="{{login3.weixin}}">
+                            <img src="image/wap/login_03.jpg">
+                        </a>-->
+                        <a href="/ishop/web/?app_act=member/weibo">
+                            <img src="images/login_05.jpg">
+                        </a>
+                        <a href="/ishop/web/?app_act=member/qq">
+                            <img src="images/login_07.jpg">
                         </a>
                     </div>
                 </div>
-                <!-- module1 end -->
-                <!--特别推荐-->
-                <div class="main100 main_new">
-                    <div>Most wanted</div>
-                    <div>特别推荐</div>
-                </div>
-                <!--切换商品列表 轮播图-->
-                <div class="main100">
-
-                </div>
-                <!--切换商品列表 end-->
-                <!-- 15周年限量 -->
-                <div class="anniversary">
-                    <a href="#/year" class="wap_hide">
-                        <img ng-src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811464078.jpg" src="https://www.bolon.cn/image/web//upload/article/20180128/2018012811464078.jpg">
-                        <div class="anniversary1">
-                            <span class="ng-binding">15th Anniversary</span>
-                            <h3 class="ng-binding">15周年限量</h3>
-                        </div>
-                    </a>
-                    <a href="#/year" class="pc_hide">
-                        <img ng-src="https://www.bolon.cn/image/web//upload/article/20180128/2018012814052310.jpg" src="https://www.bolon.cn/image/web//upload/article/20180128/2018012814052310.jpg">
-                        <div class="anniversary1">
-                            <span class="ng-binding">15th Anniversary</span>
-                            <h3 class="ng-binding">15周年限量</h3>
-                        </div>
-                    </a>           
-                </div>
-                <!-- 15周年限量 end-->
-                <!-- module2 -->
-                <div class="module2">
-                    <div class="topm">
-                        <div class="lefttop">
-                            <a href="#/process" class="wen_home1 wap_hide">
-                                <img ng-src="https://www.bolon.cn/image/web//upload/article/20170513/2017051320114410.jpg" src="https://www.bolon.cn/image/web//upload/article/20170513/2017051320114410.jpg">
-                                <div class="home_xx">
-                                    <span class="ng-binding">Top Technology</span>
-                                    <h3 class="ng-binding">极致工艺</h3>
-                                </div>
-                            </a>
-                            <a href="#/process" class="wen_home1 pc_hide">
-                                <img ng-src="https://www.bolon.cn/image/web//upload/article/20180128/2018012814005162.jpg" src="https://www.bolon.cn/image/web//upload/article/20180128/2018012814005162.jpg">
-                                <div class="home_xx">
-                                    <span class="ng-binding">Top Technology</span>
-                                    <h3 class="ng-binding">极致工艺</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="rightop">
-                            <a href="#/gushi" class="wen_home2 wap_hide">
-                                <img ng-src="https://www.bolon.cn/image/web//upload/article/20170513/2017051320112852.jpg" src="https://www.bolon.cn/image/web//upload/article/20170513/2017051320112852.jpg">
-                                <div class="home_xx">
-                                    <span class="ng-binding">Brand Story</span>
-                                    <h3 class="ng-binding">品牌故事</h3>
-                                </div>
-                            </a>
-                            <a href="#/gushi" class="wen_home2 pc_hide">
-                                <img ng-src="https://www.bolon.cn/image/web//upload/article/20180128/2018012814065933.jpg" src="https://www.bolon.cn/image/web//upload/article/20180128/2018012814065933.jpg">
-                                <div class="home_xx">
-                                    <span class="ng-binding">Brand Story</span>
-                                    <h3 class="ng-binding">品牌故事</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="botm">
-                        <div class="leftbot">
-                            <a href="#/about" class="wen_home3 wap_hide">
-                                <img ng-src="https://www.bolon.cn/image/web//upload/article/20170513/2017051320111373.jpg" src="https://www.bolon.cn/image/web//upload/article/20170513/2017051320111373.jpg">
-                                <div class="home_xx">
-                                    <span class="ng-binding">Contact Us</span>
-                                    <h3 class="ng-binding">联系我们</h3>
-                                </div>
-                            </a>
-                            <a href="#/about" class="wen_home3 pc_hide">
-                                <img ng-src="https://www.bolon.cn/image/web//upload/article/20170526/2017052610281542.jpg" src="https://www.bolon.cn/image/web//upload/article/20170526/2017052610281542.jpg">
-                                <div class="home_xx">
-                                    <span class="ng-binding">Contact Us</span>
-                                    <h3 class="ng-binding">联系我们</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="rightbot">
-                            <a href="javascript:void(0);" ng-click="home_shop()" class="wap_hide">
-                                <img ng-src="https://www.bolon.cn/image/web//upload/article/20170601/2017060116462659.jpg" src="https://www.bolon.cn/image/web//upload/article/20170601/2017060116462659.jpg">
-                                <div class="home_xx">
-                                    <span class="ng-binding">Retail Stores</span>
-                                    <h3 class="ng-binding">零售店铺</h3>
-                                </div>
-                            </a>
-                            <a href="javascript:void(0);" ng-click="home_shop()" class="pc_hide">
-                                <img ng-src="https://www.bolon.cn/image/web//upload/article/20170601/2017060116463028.jpg" src="https://www.bolon.cn/image/web//upload/article/20170601/2017060116463028.jpg">
-                                <div class="home_xx">
-                                    <span class="ng-binding">Retail Stores</span>
-                                    <h3 class="ng-binding">零售店铺</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!--module2 ed-->               
             </div>
-            <!--container ed-->
-
+            <!-- 手机端 end -->
         </div>
          <!--wrapper home_page ng-scope 中间内容 end -->
+         <!-- 注册 start -->
+         <div class="cancel ng-scope registerImately" id="registerImately" >
+            <div class="cancel1 cancel2">
+                <span class="main100"></span>
+                <h3 class="main100 wang">立即注册</h3>
+                <p class="main100">*必填</p>
+                <input type="text" class="mi_input ng-pristine ng-untouched ng-valid ng-valid-maxlength" placeholder="*手机号码" ng-model="regName" maxlength="11">
+                <!-- ngIf: regImgShow -->
+                <div class="main100">
+                     <input type="text" class="mi_input mi_input1 ng-pristine ng-untouched ng-valid ng-valid-maxlength" placeholder="*验证码" ng-model="regYan" maxlength="4"> 
+                     <a class="mi_yan" ng-click="yan($event)">获取验证码</a>
+                </div>
+                 <input type="password" class="mi_input ng-pristine ng-untouched ng-valid ng-valid-maxlength" placeholder="*新密码" ng-model="regMI" maxlength="20"> 
+                  <input type="password" class="mi_input ng-pristine ng-untouched ng-valid ng-valid-maxlength" placeholder="*确认密码" ng-model="regMI1" maxlength="20"> 
+                  <div class="login_fuwu">
+                      注册服务<br>
+                    注册一个帐号成为会员，您将获得更多关于品牌 的专属服务。同时您能通过此帐号任意购
+                    买您所心仪的产品。 并将关注的商品分享至任意社交媒体上。
+                  </div>
+                  <div class="main100">
+                      <input type="checkbox" checked="" class="login_ty1">
+                    <h2 class="login_ty2">我已阅读并同意《<a>BOLON会员注册协议</a>》</h2>
+                  </div>
+                <a class="cancel_a mi_a top40" ng-click="regBtn()">确定</a>
+            </div>
+        </div>
+         <!-- 注册 end -->
         <!-- foooter -->
         <div class="footer">
             <div class="footer1 wap_hide">
@@ -657,24 +601,86 @@
                     </div>                        
                 </div>
             </div>
+            <!-- 尾部 start-->
+            <div class="wap_footer pc_hide">  
+                <div class="wen_foot_mobil_ss">                       
+                    <div class="main100 footer_title">客户服务</div>               
+                    <div class="main100"><a class="footer_x" href="#/about">联系我们</a> <a class="footer_xx" href="#/issue">常见问题</a> <a class="footer_x" href="http://wx.bolon.cn/fw_bl/#/app/custom/BOLON">售后维修</a> <a class="footer_xx" href="http://59.60.10.21:9090/BolonWebservice/blpc">在线客服</a></div>
+                    <div class="footer_title">关于公司</div>
+                    <div class="main100">
+                        <a class="footer_xxx" href="#/bolon">关于BOLON</a> 
+                        <a class="footer_xxx" href="#/kuan">细则及条款</a> 
+                        <a class="footer_xxx" href="#/cooke">隐私与COKOKIE</a>
+                    </div>
+                </div>
+                <div class="footer_title">关注BOLON</div>
+                <div class="foo_wei" biao="0">
+                    <img src="images/weixin1.jpg" alt="" class="f_weixin1">
+                </div>
+                <div class="main100">
+                    <a href="javascript:void(0);" class="footer_xxx foo_we">
+                            <img src="images/weixin1.png">
+                    </a>
+                    <a href="http://weibo.com/p/1006061745344033/home?from=page_100606&amp;mod=TAB&amp;is_all=1#place" class="footer_xxx">
+                        <img src="images/weibo1.png">
+                    </a>
+                    <a href="https://www.instagram.com/boloneyewear/" class="footer_xxx">
+                        <img class="footer_xxx_img" src="images/xiang1.png">
+                    </a>
+                </div>
+                <!--电子资讯-->
+                <div class="main100 footer_zx">
+                    <span>订阅BOLON电子资讯</span>
+                    <div class="main100">
+                        <input type="text" placeholder="电子邮件地址" ng-model="dy" ng-keyup="sendEmail($event)" class="ng-pristine ng-untouched ng-valid">
+                        <a href="javascript:void(0);" class="go" ng-click="dingyue()"></a>
+                    </div>
+                </div>
+                <div class="main100 footer_zx">
+                    <span class="footer_zx_span">专卖店查询</span>
+                    <div class="main100">
+                        <input class="footer_cs" placeholder="城市，国家" id="home_go" ng-keyup="goShop($event)">
+                        <a href="javascript:void(0);" class="go" ng-click="dingyue()"></a>
+                    </div>
+                </div>
+                <a class="footer_top" ng-click="foot_to_top()">返回顶部</a>
+                <img class="footer_logo" src="images/logo11.png">
+                <p class="footer_p">Copyright  2015 BOLON. All Rights Reserved 闽ICP备11001899号-3</p>
+            </div>
+            <!-- 尾部 end -->
         </div>
-        
-
+        <!-- 登录点击 start -->
+        <div id="baison-out-1518006208256.4043" class="baison-base baison-visible baison-alert" style="z-index: 1000001;">
+            <div id="baison-bg-1518006208256.4043" class="smokebg"></div>
+            <div class="dialog baison ">
+                <div class="dialog-inner">
+                    <div class="inner-inner">
+                        <div class="dialog-con">请输入账号
+                            
+                        </div>
+                        <div class="dialog-buttons average">
+                            <p class="button button_load" id="alert-ok-1518006208256.4043">确定</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 登录点击 end -->
     </div>
 </body>
 </html>
 <script src="javascripts/jquery-1.8.3.js"></script>
-<script src="javascripts/index.js?p=1"></script>
+<script src="javascripts/load.js?p=1"></script>
 <script type="text/javascript">
 var scrolltotop={
 	setting:{
-		startline:100, //起始行
-		scrollto:0, //滚动到指定位置
-		scrollduration:400, //滚动过渡时间
-		fadeduration:[500,100] //淡出淡现消失
+		startline:100,
+		scrollto:0,
+		scrollduration:400,
+		fadeduration:[500,100]
 	},
 	controlHTML:'<img src="images/kfu.jpg" style="width:45px; height:40px; border:0; z-index:20000;bottom:50px;" />', //返回顶部按钮
-	controlattrs:{offsetx:10,offsety:10},//返回按钮固定位置
+	controlattrs:{offsetx:10,offsety:10},
 	anchorkeyword:"#top",
 	state:{
 		isvisible:false,

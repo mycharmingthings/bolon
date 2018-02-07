@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎成为1708班的会员</title>
+</head>
+<body>
+<h1>这是注册</h1>
+    <form method="post" action="reg.do">
+        用户名：<input type="text" id="userid" name="username" value="jzm"/><span id="userMsg"></span><br/>
+        密码：<input type="password" name="userpass" value="123123" /><br/>
+        确认密码：<input type="password" /><br/>
+        年龄：<input type="text" name="age" value="0" /><br/>
+        <input type="submit" value="注册">
+    </form>
+</body>
+</html>
+
+<script type="text/javascript">
+    function $(id) {
+        return document.getElementById(id);
+    }
+    window.onload = function () {
+        $("userid").onblur = function () {
+            let xhr = new XMLHttpRequest();
+            xhr.open("get","usercheck.do?username="+$("userid").value,true);
+
+            xhr.onreadystatechange = function () {
+                console.log("xhr.readyState="+xhr.readyState);
+                console.log("xhr.status="+xhr.status);
+                console.log("---------------------------------");
+                if(xhr.readyState==4 && xhr.status==200){
+                    if(xhr.responseText==1){//data是1：表示存在，0：表示不存在
+                        $("userMsg").innerHTML="亲，该用户名已被使用";
+                    }else{
+                        $("userMsg").innerHTML="亲，该用户名没有人用，赶紧注册吧！";
+                    }
+                }
+            }
+
+            xhr.send();
+        }
+    }
+</script>
